@@ -8,13 +8,13 @@ import { useDispatch } from 'react-redux'
 import { setUser } from '../../Store/CreateSlices'
 
 const LoginPage = () => {
-  
+
   const auth = useAuth();
   const dispatch = useDispatch()
   const navigate = useNavigate();
-  
+
   const apiUrl = import.meta.env.VITE_API_BASE_URL;
-  
+
   const { postData, loadingPost, response } = usePost({ url: `${apiUrl}/api/admin/auth/login` }); // Destructure as an object
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -67,7 +67,7 @@ const LoginPage = () => {
               : (
                 <>
                   <div className="flex w-full  flex-col items-start justify-start gap-y-4">
-                    <span className='sm:text-4xl xl:text-5xl font-TextFontRegular text-secoundColor'>Login to Lamada</span>
+                    <span className='sm:text-4xl xl:text-5xl font-TextFontRegular text-secoundColor'>Login to Kanary</span>
                     <span className='sm:text-4xl xl:text-5xl font-TextFontRegular text-secoundColor'>welcome back</span>
                   </div>
                   <div className="w-full flex flex-col justify-center gap-y-10 h-3/5">
